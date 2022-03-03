@@ -1,6 +1,4 @@
 from fastapi import APIRouter
-import datetime
-x = datetime.datetime.now()
 courses_api_router = APIRouter()
 
 
@@ -8,10 +6,10 @@ courses_api_router = APIRouter()
 async def read_item(year: int):
     if year != 0:
         if year < 0:
-            return {"msg":"Data Underflow"}
-        elif year > (x.year+543):
-            return {"msg":"that is the future"}
+            return {"msg":"This value was under"}
+        elif year > 2565:
+            return {"msg":"This value was in the future"}
         else :
-            year = (x.year+543)-year
+            year = 2565-year
             return {"age": year}
-    return {"msg": "No information found."}
+    return {"msg": "No value."}
