@@ -52,7 +52,7 @@ jobs:
           command: aws s3 cp function.zip s3://tanadonsasi/function.zip
       - run:
           name: Deploy new Lambda
-          command: aws lambda update-function-code --function-name *** --s3-bucket tanadonsasi --s3-key function.zip
+          command: aws lambda update-function-code --function-name tanadonsasi --s3-bucket tanadonsasi --s3-key function.zip
 
 workflows:
   build-test-and-deploy:
