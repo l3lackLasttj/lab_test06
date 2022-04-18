@@ -12,4 +12,8 @@ def read_root():
 def read_item(item_id: int, q: str = None):
     return {"item_id": item_id, "q": q}
 
+    @app.get("/test")
+def read_root():
+    return {"Hello": "Sasi"}
+
 handler = Mangum(app)
